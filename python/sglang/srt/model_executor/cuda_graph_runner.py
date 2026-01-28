@@ -722,6 +722,15 @@ class CudaGraphRunner:
 
         self.deepep_adapter.capture(is_extend_in_batch=False)
 
+        self.device_module.synchronize()
+        self.model_runner.tp_group.barrier()
+        with profile(
+            activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+            record_shapes=True,
+            with_stack=True,
+        ) as prof:
+            run_once()
+        prof.export_chrome_trace(f"cuda_graph_warmup_bs{bs}_{torch.distributed.get_rank()}.json")
         for _ in range(2):
             self.device_module.synchronize()
             self.model_runner.tp_group.barrier()
