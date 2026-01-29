@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Remote Attach (Rank 1)",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "${workspaceFolder}"
+                }
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "Python: Remote Attach (Custom Host)",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "${input:remoteHost}",
+                "port": 5678
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "${workspaceFolder}"
+                }
+            ],
+            "justMyCode": false
+        }
+    ],
+    "inputs": [
+        {
+            "id": "remoteHost",
+            "type": "promptString",
+            "description": "Enter the remote host IP address",
+            "default": "localhost"
+        }
+    ]
+}

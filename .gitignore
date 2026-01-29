@@ -280,3 +280,10 @@ sgl-kernel/third_party/
 
 # MUSA core dump files
 core_*
+
+*.hip
+*.cuh
+*.json
+sgl-kernel/include/utils_hip.h
+sgl-kernel/csrc/allreduce/quick_all_reduce_hip.h
+.specstory/
