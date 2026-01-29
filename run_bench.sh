@@ -257,4 +257,4 @@ run_benchmark_serving \
     --num-prompts $(( $CONC * 2 )) \
     --max-concurrency "$CONC" \
     --result-filename "$RESULT_FILENAME" \
-    --result-dir /workspace/
+    --result-dir /root/
