@@ -13,22 +13,10 @@
                 {
                     "localRoot": "${workspaceFolder}",
                     "remoteRoot": "${workspaceFolder}"
-                }
-            ],
-            "justMyCode": false
-        },
-        {
-            "name": "Python: Remote Attach (Custom Host)",
-            "type": "debugpy",
-            "request": "attach",
-            "connect": {
-                "host": "${input:remoteHost}",
-                "port": 5678
-            },
-            "pathMappings": [
+                },
                 {
-                    "localRoot": "${workspaceFolder}",
-                    "remoteRoot": "${workspaceFolder}"
+                    "localRoot": "/sgl-workspace/aiter",
+                    "remoteRoot": "/sgl-workspace/aiter"
                 }
             ],
             "justMyCode": false

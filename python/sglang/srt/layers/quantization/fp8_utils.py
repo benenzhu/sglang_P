@@ -499,10 +499,10 @@ def aiter_w8a8_block_fp8_linear(
         q_input, x_scale = aiter_per1x128_quant(input_2d, quant_dtype=aiter.dtypes.fp8)
 
     output = gemm_a8w8_blockscale(
-        q_input,
-        weight,
-        x_scale,
-        weight_scale,
+        q_input, # [B, 7168]
+        weight, # [2112, 7168] # 2112 = 33 * 64   7168 = 7 * 1024
+        x_scale, # [8, 56]
+        weight_scale, # [16, 56]
         dtype=torch.bfloat16 if input_scale is not None else input.dtype,
     )
 
