@@ -55,13 +55,13 @@ CONC16:
 Mean TPOT (ms):                          14.49     
 Median TPOT (ms):                        13.24
 
-CONC32:
-Mean TPOT (ms):                          22.42     
-Median TPOT (ms):                        20.21
+CONC32 (max_running=128):
+Mean TPOT (ms):                          20.36     
+Median TPOT (ms):                        20.06
 
-CONC64:
-Mean TPOT (ms):                          35.38     
-Median TPOT (ms):                        37.02
+CONC64 (max_running=128):
+Mean TPOT (ms):                          28.58     
+Median TPOT (ms):                        27.97
 
 ---
 
@@ -72,8 +72,8 @@ Median TPOT (ms):                        37.02
 | CONC4       | 28.76  | 22.05     | 10.44           | 1.30x        | 2.11x       | **2.75x** |
 | CONC8       | 37.19  | 25.56     | 11.34           | 1.46x        | 2.25x       | **3.28x** |
 | CONC16      | 47.17  | 30.83     | 13.24           | 1.53x        | 2.33x       | **3.56x** |
-| CONC32      | 46.60  | 34.30     | 20.21           | 1.36x        | 1.70x       | **2.31x** |
-| CONC64      | 61.34  | 45.25     | 37.02           | 1.36x        | 1.22x       | **1.66x** |
+| CONC32      | 46.60  | 34.30     | 20.06           | 1.36x        | 1.71x       | **2.32x** |
+| CONC64      | 61.34  | 45.25     | 27.97           | 1.36x        | 1.62x       | **2.19x** |
 
 ## Output Throughput (tok/s)
 
@@ -82,5 +82,5 @@ Median TPOT (ms):                        37.02
 | CONC4       | 371.57          |
 | CONC8       | 613.90          |
 | CONC16      | 862.10          |
-| CONC32      | 1160.75         |
-| CONC64      | 1139.65         |
+| CONC32      | 1222.45         |
+| CONC64      | **1695.40**     |

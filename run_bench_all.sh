@@ -246,7 +246,7 @@ fi
 # Wait for server to be ready
 # wait_for_server_ready --port "$PORT"
 
-for CONC in 4 8 16 32 64; do
+for CONC in 64 32 16 8 4; do
 export RESULT_FILENAME="dsr1_fp8_mi300x_docker_conc${CONC}.json"
 run_benchmark_serving \
     --model "$MODEL" \
