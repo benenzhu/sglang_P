@@ -67,7 +67,7 @@ Median TPOT (ms):                        27.97
 
 ## 性能对比表格 (Median TPOT ms)
 
-| Concurrency | current | fp8 fix | +MTP | current→fp8_fix | fp8_fix→MTP | Overall | Interactivity |    
+| Concurrency | current| fp8_fix | +MTP | current→fp8_fix | fp8_fix→MTP | Overall | Interactivity |
 |-------------|--------|-----------|-----------------|--------------|-------------|---------|---------------|
 | CONC4       | 28.76  | 22.05     | 10.44           | 1.30x        | 2.11x       | **2.75x** | **95.8 tok/s** |
 | CONC8       | 37.19  | 25.56     | 11.34           | 1.46x        | 2.25x       | **3.28x** | 88.2 tok/s |
